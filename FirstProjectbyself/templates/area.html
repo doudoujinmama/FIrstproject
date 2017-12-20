@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}area{% endblock %}
+    <script src="/static/js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $.get('{% url 'user:sheng' %}',function (shengdata) {
+                shengtag = $('#sheng');
+                $.each(shengdata.shengdata, function (i, s) {
+                    shengtag.append('<option value="'+s[0]+'">'+s[1]+'</option>');
+
+                });
+            });
+            $('#sheng').change(function () {
+                sheng_id = $(this).val()
+                $.get('{% url 'user:shi' %}', {'shengid': sheng_id}, function (shidata) {
+                    shitag = $('#shi');
+                    shitag.empty().append('<option value="0">请选择</option>');
+                    $.each(shidata.shidata, function (i, shidir) {
+
+                        shitag.append('<option value="'+ shidir.shiid+'">'+shidir.title+'</option>');
+
+
+                    });
+                });
+
+            });
+            $('#shi').change(function () {
+                shiid = $(this).val();
+                $.get('{% url 'user:qu' %}', {'shiid':shiid}, function (qudata) {
+                    qutag =$('#qu');
+                    qutag.empty().append('<option value="0">请选择</option>');
+                    $.each(qudata.list, function (i, list01) {
+                        qutag.append('<option value="' +list01[0]+'">'+list01[1]+'</option>')
+
+                    });
+                });
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+<select id="sheng">
+    <option value="0">请选择</option>
+</select>
+<select id="shi">
+    <option value="0">请选择</option>
+</select>
+<select id="qu">
+    <option value="0">请选择</option>
+</select>
+</body>
+</html>

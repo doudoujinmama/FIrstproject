@@ -1,0 +1,96 @@
+{% extends 'base_user_center.html' %}
+{% load staticfiles %}
+
+{% block jsadd %}
+    <script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+    <script>
+        $(function () {
+            $.get('{% url 'user:province' %}',function (shengdata) {
+                shengtag = $('#province');
+                $.each(shengdata.shengdata, function (i, s) {
+                    shengtag.append('<option value="'+s[0]+'">'+s[1]+'</option>');
+                });
+            });
+            $('#province').change(function () {
+                sheng_id = $(this).val();
+                $(this).val(sheng_id);
+                $.get('{% url 'user:city' %}', {'shengid': sheng_id}, function (shidata) {
+                    shitag = $('#city');
+                    shitag.empty().append('<option value="0">请选择</option>');
+                    $.each(shidata.shidata, function (i, shidir) {
+
+                        shitag.append('<option value="'+ shidir.shiid+'">'+shidir.title+'</option>');
+
+
+                    });
+                });
+
+            });
+            $('#city').change(function () {
+                shiid = $(this).val();
+                $.get('{% url 'user:area' %}', {'shiid':shiid}, function (qudata) {
+                    qutag =$('#area');
+                    qutag.empty().append('<option value="0">请选择</option>');
+                    $.each(qudata.list, function (i, list01) {
+                        qutag.append('<option value="' +list01[0]+'">'+list01[1]+'</option>')
+
+                    });
+                });
+
+            });
+
+        });
+    </script>
+{% endblock jsadd %}
+{% block right_content %}
+		<div class="right_content clearfix">
+				<h3 class="common_title2">收货地址</h3>
+				<div class="site_con">
+					<dl>
+						<dt>默认地址：</dt>
+                        {% if address %}
+						    <dd>{{ address.zip }}    {{ address.addr }} （{{ address.name }} 收） {{ address.tel }}</dd>
+					    {% else %}
+                            <dd>无</dd>
+                        {% endif %}
+                    </dl>
+				</div>
+				<h3 class="common_title2">编辑地址</h3>
+				<div class="site_con">
+					<form method="post" action="{% url 'user:adress' %}">
+                        {% csrf_token %}
+                        {{ context }}
+						<div class="form_group">
+							<label>收件人：</label>
+							<input type="text" name="receiver">
+						</div>
+						<div class="form_group form_group2">
+							<label>详细地址：</label>
+                            <select id="province" name="province">
+                                <option value="0">请选择</option>
+                            </select>
+                            <select id="city" name="city">
+                                <option value="0">请选择</option>
+                            </select>
+                            <select id="area" name="area">
+                                <option value="0">请选择</option>
+                            </select>
+						</div>
+                        <div class="form_group">
+                            <label>详细地址：</label>
+                            <input type="text" name="desc_addr">
+                        </div>
+						<div class="form_group">
+							<label>邮编：</label>
+							<input type="text" name="zip_code">
+						</div>
+						<div class="form_group">
+							<label>手机：</label>
+							<input type="text" name="phone">
+						</div>
+
+						<input type="submit" name="" value="提交" class="info_submit">
+					</form>
+				</div>
+		</div>
+{% endblock right_content %}
