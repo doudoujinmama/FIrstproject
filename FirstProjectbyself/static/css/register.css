@@ -1,0 +1,146 @@
+.up{
+    width: 700px;
+    height: 560px;
+    margin: 0 auto;
+
+}
+.up .left {
+    width: 300px;
+    height: 475px;
+    float: left;
+}
+.up .left .up{
+    width: 200px;
+    height: 76px;
+    margin-right: 30px;
+    float: right;
+    overflow: hidden;
+}
+
+.up .left .down{
+    width: 300px;
+    height: 30px;
+    margin: 20px 30px 0 0;
+    /* box-sizing: border-box; */
+    font-size: 24px;
+    color: #69a81e;
+    float: right;
+    text-align: right;
+    line-height: 30px;
+
+}
+.up .right{
+    width: 400px;
+    height: 501px;
+    border-left: 1px rgb(54, 53, 53) solid;
+
+    box-sizing: border-box;
+    float: left;
+}
+.up .right .lable{
+    width: 360px;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 30px;
+    border-bottom: 1px rgb(71, 71, 71) solid;
+    box-sizing: border-box;
+}
+
+.up .right .lable h1{
+    font-size: 24px;
+    float: left;
+}
+.up .right .lable a{
+    font-size: 16px;
+    color: #5fb205;
+    background: url(../images/icons02.png) no-repeat 34px 17px;
+    padding-right: 20px;
+    float: right;
+}
+
+.up .right .register{
+    width: 360px;
+    height: 420px;
+    margin-left: 30px;
+    margin-top: 30px;
+
+}
+.up .right .register ul{
+    width: 360px;
+}
+.up .right .register ul li{
+    width: 360px;
+    height: 70px;
+}
+
+.up .right .register ul li span{
+    width: 360px;
+    height: 30px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+    color: red;
+    display: none;
+}
+
+.up .right .register ul li lable{
+    width: 70px;
+    height: 40px;
+    font-size: 14px;
+    float: left;
+}
+
+.up .right .register ul li input{
+    width: 280px;
+    height: 40px;
+    border: 0;
+    /* border-bottom: 1px solid rgb(218, 217, 217); */
+    outline: none;
+    text-indent: 10px;
+    background: rgb(236, 235, 235);
+    box-sizing: border-box;
+    float: left;
+   
+}
+.up .right .register ul li .checkbox{
+    width: 15px;
+    height: 15px;
+    float: left;
+}
+.up .right .register ul li p{
+    width: 300px;
+    height: 40px;
+    margin-left: 10px;
+    float: left;
+}
+
+.up .right .register ul li .submit{
+    width: 360px;
+    height: 40px;
+    /* background: #5fb205; */
+    font-size: 18px;
+    text-align: center;
+    height: 40px;
+    cursor: pointer;
+    color: #fff;
+}
+.center{
+    border-top: 2px #5fb205 solid;
+}
+.center .txt{
+    width: 400px;
+    height: 200px;
+    margin: 30px auto;
+
+
+}
+.center .txt p{
+    height: 17px;
+    text-align: center;
+    line-height: 17px;
+}
+.center .txt p a{
+    /* float: left; */
+    margin-right: 5px;
+    font-size: 12px;
+}

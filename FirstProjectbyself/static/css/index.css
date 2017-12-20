@@ -1,0 +1,373 @@
+.site-nav-wrop{
+    height: 30px;
+    background: #f7f7f7;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+}
+.site-nav{
+    width: 1200px;
+    height: 29px;
+    line-height: 29px;
+    margin: 0 auto;
+    
+}
+.left{
+    float: left;
+}
+
+.site-nav ul{
+    float: right;
+}
+.site-nav ul li{
+    float: left;
+    margin-right: 15px;
+}
+.header{
+    width: 1200px;
+    height: 59px;
+    margin: 0 auto;
+    margin-top: 29px;
+    margin-bottom: 27px;
+
+}
+
+.header .h1{
+    width: 150px;
+    height: 60px;
+    float: left;
+}
+
+.header .search
+{
+    width: 618px;
+    height: 40px;
+    float: left;
+    margin-left: 124px;
+    margin-top: 5px;
+}
+
+.header .search .txt{
+    width: 517px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid #37ab40;
+    padding-left: 36px;
+    background: url(../images/icons.png) no-repeat;
+    background-position: 9px 10px;
+    float: left;
+
+}
+.header .search .but{
+    width: 101px;
+    height: 40px;
+    background: #37ab40;
+    border: 0;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+}
+.header .car{
+    width: 200px;
+    height: 40px;
+    float: right;
+    margin-top: 5px;
+ 
+}
+.header .car .leftcar{
+    width: 160px;
+    height: 40px;
+    background: #f7f7f7 url(../images/icons.png) no-repeat;
+    border: 1px solid #ddd;
+    box-sizing: border-box ;
+    float: left;
+    line-height: 38px;
+    padding-left: 55px;
+    background-position: 9px -42px;
+    color: #37ab40;
+    font-size: 14px;
+
+}
+.header .car span{
+    float: left;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: #f80;
+    color: #f7f7f7;
+    font-size: 14px;
+}
+
+.main_mune_con{
+    height: 40px;
+    border-bottom: 2px solid #37ab40;
+}
+
+.main_mune_con .main_mune{
+    width: 1200px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+
+.main_mune_con .main_mune .fl-mune{
+    width:200px;
+    height: 40px;
+    background: #37ab40;
+    float: left;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    
+}
+
+.main_mune_con .main_mune .fl{
+    width: 244px;
+    height: 40px;
+    float: left;
+}
+.main_mune_con .main_mune li{
+    text-align: center;
+    line-height: 40px;
+    float: left;
+}
+.main_mune_con .main_mune .l{
+    width: 72px;
+    
+}
+.center_con1{
+    width: 1200px;
+    height: 270px;
+    margin: 0 auto;
+}
+
+.center_con1 .left{
+    width: 200px;
+    height: 270px;
+    float: left;
+}
+.center_con1 .left li{
+    width: 200px;
+    height: 45px;
+    border: 1px solid #f7f7f7;
+    box-sizing: border-box;
+    background: url(../images/icons.png) no-repeat;
+    text-align: center;
+    line-height: 45px;
+    
+}
+.center_con1 .left .b1{
+    
+    background-position: 10px -91px;
+
+}
+
+.center_con1 .left .b2{
+  
+    background-position: 10px -139px;
+
+}
+
+.center_con1 .left .b3{
+
+    background-position: 10px -187px;
+
+}
+.center_con1 .left .b4{
+   
+    background-position: 10px -240px;
+
+}
+.center_con1 .left .b5{
+  
+    background-position: 10px -291px;
+
+}
+.center_con1 .left .b6{
+ 
+    background-position: 10px -338px;
+
+}
+.center_con1 .left a{
+    width: 200px;
+    height: 45px;
+    float: right;
+    background: url(../images/icons.png) no-repeat 170px -386px;
+}
+.center_con1 .center{
+width: 760px;
+height: 270px;
+
+float: left;
+}
+.center_con1 .center .bg
+{
+    width: 760px;
+    height: 270px;
+    position: relative;
+    overflow: hidden;
+}
+
+.center_con1 .center .bg ul li{
+    position: absolute;
+    left: 0;
+    top:0;
+}
+.center_con1 .center .bg ol{
+    width: 100px;
+    height: 11px;
+    position: absolute;
+    left: 350px;
+    bottom: 10px;
+    z-index: 101;
+    
+}
+.center_con1 .center .bg ol li{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #615f5f;
+    float: left;
+    
+}
+.center_con1 .center .bg ol .active{
+    background:rgb(211, 205, 205);
+}
+
+.center_con1 .center .bg .left{
+    width: 50px;
+    height:50px;
+    position: absolute; 
+    left: 0;
+    top: 50%; 
+    margin-top: -25px;
+    background: url('../images/icons.png') no-repeat;
+    background-position:10px -430px;
+}
+.center_con1 .center .bg .right{
+    width: 50px;
+    height: 50px;
+    position: absolute; 
+    right: 0;
+    top: 50%; 
+    margin-top: -25px;
+    background: url('../images/icons.png') no-repeat;
+    background-position:10px -477px;
+}
+.center_con1 .right{
+    width: 240px;
+    height: 270px;
+    float: right;
+}
+.center_con1 .right li{
+    width: 240px;
+    height: 135px;
+}
+
+.commo_model{
+    width: 1200px;
+    height:335px;
+    margin: 21px auto 0;
+}
+.commo_model .title{
+    width: 1200px;
+    height: 35px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 35px;
+    border-bottom: 2px solid #37ab40;
+}
+.commo_model dl{
+    float: left;
+
+}
+.commo_model dt{
+   color: #37ab40;
+   float: left;
+   width: 64px;
+   height: 33px;
+}
+.commo_model dd{
+    float: left;
+    font-size: 12px;
+    margin-left: 15px;
+}
+.commo_model span{
+    float: right;
+}
+.goods{
+    width: 1200px;
+    margin: 0 auto;
+}
+.goods .goods_list{
+    width: 200px;
+    height: 300px;
+    float: left;
+}
+.goods ul{
+    width: 1000px;
+    height: 300px;
+    float: left;
+}
+.goods ul li{
+    width: 250px;
+    height: 300px;
+    float: left;
+    text-align: center;
+}
+.goods ul li a{
+    width: 180px;
+    height: 180px;
+    display: block;
+    margin: 0 auto;
+}
+.goods ul li h4{
+    
+    height: 52px;
+    line-height: 52px;
+
+}
+
+.goods ul li p{
+    color: rgb(236, 16, 16);
+    margin-top: 22px;
+}
+
+.foot{
+    
+    height: 200px;
+    margin-top: 9px;
+    border-top: 2px solid #37ab40;
+    margin-bottom: 34px;
+    box-sizing: border-box;
+    
+}
+.foot .foot_list{
+    width: 1200px;
+    height: 118;
+    margin: 0 auto;
+    margin-top: 30px; 
+    text-align: center;
+}
+
+/* .foot .foot_list ul{
+    margin-left: 600px;
+    height: 17px;
+     
+}
+
+.foot .foot_list li{
+    float: left;
+    margin-left: 20px;
+} */
+
+.foot .foot_list p{
+    text-align: center;
+    height: 52px;
+    margin-top: 9px;
+    box-sizing: border-box;
+    line-height: 52px;
+}
