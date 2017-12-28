@@ -1,3 +1,10 @@
 from django.shortcuts import render
+from utils.Mivx import LoginRequiredMixin
 
-# Create your views here.
+
+class register(LoginRequiredMixin):
+    def get(self, request):
+        if request.method == 'GET':
+            return render(request, 'register.html')
+        else:
+            pass
