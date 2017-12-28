@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'FirstProjectbyself.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'github',
+        'HOST':'localhost',
+        'PORT': 3306,
+        'USER':'root',
+        'PASSWORD':'mysql'
     }
 }
 
@@ -88,7 +92,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'zn-Hans'
 
-TIME_ZONE = 'Area/Shanghai'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
