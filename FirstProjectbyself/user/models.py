@@ -39,3 +39,19 @@ class Customer(BaseModel):
 
     def __str__(self):
         return self.name
+
+class UserDetail(BaseModel):
+    SEX = {
+        1:'男',
+        2:'女'
+    }
+    SEX_CHOICES=((1,'男'), (2,'女'))
+    user = models.ForeignKey('User',verbose_name='用户id')
+    avatar = models.ImageField(upload_to='avatar', verbose_name='头像')
+    birthday = models.DateField(verbose_name='出生年月日')
+    gender= models.IntegerField(choices=SEX_CHOICES, default=1, verbose_name='性别')
+
+    class Meta:
+        db_table = 'userdetail'
+        verbase_name = '用户详细信息'
+        verbase_name_plural = verbase_name
